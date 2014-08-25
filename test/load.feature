@@ -21,6 +21,12 @@ Feature: Develop a gulp task loader with parameters
     When I load a module with gulp tasks
     Then the gulp task in module should exist
 
+  Scenario: load specified module with custom module prefix
+
+    Given I have initialised gulp-load using a custom module prefix
+    When I load a module with gulp tasks using a custom module prefix
+    Then the gulp task in custom prefixed module should exist
+
   Scenario: gulp-load-global
 
     Given I have initialised gulp-load

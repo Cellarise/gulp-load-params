@@ -44,12 +44,13 @@ module.exports = function (gulp) {
                             }
                         }
                         //ensure this sub task gets executed to update the
-                        gulp.src([directories.doc + '/**/readme-license.dust.md'])
+                        gulp.src([directories.doc + '/templates/license/readme-license.dust'])
                             .pipe(new GulpDustCompileRender(context))
                             .pipe(rename(function (path) {
-                                path.basename = path.basename.replace('.dust', '');
+                                path.basename = path.basename + '.dust';
+                                path.extname = '.md';
                             }))
-                            .pipe(gulp.dest(directories.doc))
+                            .pipe(gulp.dest(directories.doc + '/templates'))
                             .on('end', function () {
                                 self.resume();
                             });

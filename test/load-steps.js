@@ -36,7 +36,21 @@ module.exports = (function() {
             should.exist(gulp.tasks.b);
             should.exist(gulp.tasks.c);
             done();
-        })/*Scenario: gulp-load-global */
+        })
+        .define("Given I have initialised gulp-load using a custom module prefix", function(done) {
+            this.world.loadCustom = require('..')(gulp, {modulePrefix: 'task-'});
+            done();
+        })
+        .define("When I load a module with gulp tasks using a custom module prefix", function(done) {
+            this.world.loadCustom(__dirname + '/gulp-module');
+            done();
+        })
+        .define("Then the gulp task in custom prefixed module should exist", function(done) {
+            should.exist(gulp.tasks.b);
+            should.exist(gulp.tasks.e);
+            done();
+        })
+        /*Scenario: gulp-load-global */
         .define("When I load a global module with gulp tasks", function(done) {
             this.world.load('gulp-load-global');
             done();

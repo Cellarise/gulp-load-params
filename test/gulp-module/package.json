@@ -2,6 +2,7 @@
   "name": "gulp-module",
   "version": "0.0.0",
   "dependencies": {
-    "gulp-sub": "*"
+    "gulp-sub": "*",
+      "task-sub": "*"
   }
 }

@@ -16,7 +16,7 @@ module.exports = function(gulp) {
             partialsGlob: path.join(process.cwd(), directories.doc) + '/templates/*.dust*'
         };
 
-        return gulp.src([directories.doc + '/**/*.dust.md'])
+        return gulp.src([directories.doc + '/templates/readme.dust.md'])
             .pipe(new GulpDustCompileRender(context, options))
             .pipe(rename(function (path) {
                 path.basename = path.basename.replace('.dust','');

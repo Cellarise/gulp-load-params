@@ -35,6 +35,8 @@ Load gulp task just like grunt.loadTasks and pass parameters through an options 
 **Params**
 
 - gulp `Object` - The gulp module  
+- opts `Object` - optional options  
+  - \[modulePrefix='gulp-'\] `Object` - load dependencies that start with this prefix in package.json.  
 
 **Type**: `name`  
 **Returns**: `loadTasks`  
