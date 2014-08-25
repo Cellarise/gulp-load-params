@@ -1,0 +1,21 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "duration": 24,
+    "start": "2014-08-22T12:15:16.492Z",
+    "end": "2014-08-22T12:15:16.516Z"
+  },
+  "failures": [],
+  "passes": [
+    {
+      "title": "JSHint no-lint-errors.js",
+      "fullTitle": " C:\\Atlassian\\NPM\\jshint-reporter-bamboo\\Test\\resources\\no-lint-errors.js",
+      "duration": 24
+    }
+  ],
+  "skipped": []
+}

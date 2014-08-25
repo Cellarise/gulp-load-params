@@ -1,0 +1,50 @@
+[
+  {
+    "id": "JSHINT-code-analysis-feature",
+    "uri": "features/JSHINT-code-analysis.feature",
+    "keyword": "Feature",
+    "name": "JSHINT code analysis",
+    "line": 1,
+    "description": "As a developer\nI want to ensure JSHINT code analysis standards are met\nSo that my code is conformant with technical standards designed to ensure consistency and readability",
+    "elements": [
+      {
+        "id": "lint-errors.js",
+        "keyword": "Scenario",
+        "name": "JSHint - lint-errors.js",
+        "line": 3,
+        "description": " - C:\\Atlassian\\NPM\\jshint-reporter-bamboo\\Test\\resources\\lint-errors.js",
+        "type": "scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "name": "a Javascript file and the repositories default JSHint configuration file",
+            "keyword": "Given ",
+            "line": 4
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "name": "analysed using JSHint",
+            "keyword": "When ",
+            "line": 5
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "failed",
+              "error_message": "7 JSHint Failures JSHint: 1. line undefined, char undefined: \n2. line undefined, char undefined: \n3. line undefined, char undefined: \n4. line undefined, char undefined: \n5. line undefined, char undefined: \n6. line undefined, char undefined: \n7. line undefined, char undefined: "
+            },
+            "name": "the file should meet the defined coding standards",
+            "keyword": "Then ",
+            "line": 6
+          }
+        ]
+      }
+    ]
+  }
+]

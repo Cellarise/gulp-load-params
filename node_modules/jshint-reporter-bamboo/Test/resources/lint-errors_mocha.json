@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "duration": 32,
+    "start": "2014-08-22T12:15:16.460Z",
+    "end": "2014-08-22T12:15:16.492Z"
+  },
+  "failures": [
+    {
+      "title": "JSHint lint-errors.js",
+      "fullTitle": " C:\\Atlassian\\NPM\\jshint-reporter-bamboo\\Test\\resources\\lint-errors.js",
+      "duration": 32,
+      "error": "7 JSHint Failures JSHint: 1. line undefined, char undefined: \n2. line undefined, char undefined: \n3. line undefined, char undefined: \n4. line undefined, char undefined: \n5. line undefined, char undefined: \n6. line undefined, char undefined: \n7. line undefined, char undefined: "
+    }
+  ],
+  "passes": [],
+  "skipped": []
+}
