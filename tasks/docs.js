@@ -15,9 +15,9 @@ module.exports = function(gulp) {
         var context = require(process.cwd() + '/package.json');
         var directories = context.directories;
         var options = {
-            template: './doc_templates/readme.md',
+            template: './doc/readme.md',
             preserveWhitespace: true,
-            partialsGlob: path.join(process.cwd(), directories.doc) + '/*.dust*'
+            partialsGlob: path.join(process.cwd(), directories.doc) + '/templates/*.dust*'
         };
 
         return gulp.src([directories.lib + '/**/*.js'])

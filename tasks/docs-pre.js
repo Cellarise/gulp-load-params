@@ -13,7 +13,7 @@ module.exports = function(gulp) {
         var context = require(process.cwd() + '/package.json');
         var directories = context.directories;
         var options = {
-            partialsGlob: path.join(process.cwd(), directories.doc) + '/*.dust*'
+            partialsGlob: path.join(process.cwd(), directories.doc) + '/templates/*.dust*'
         };
 
         return gulp.src([directories.doc + '/**/*.dust.md'])

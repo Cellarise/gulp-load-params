@@ -1,33 +1,19 @@
 {
   "name": "gulp-load-params",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Load gulp task just like grunt.loadTasks and pass parameters through an options object.",
   "author": "John Barry",
-    "license": "MIT License (MIT)",
+  "license": "MIT License (MIT)",
   "repository": {
     "type": "git",
     "url": "https://github.com/Cellarise/gulp-load-params.git"
   },
-  "keywords": [
-    "gulp",
-    "gulpplugin"
-  ],
+  "keywords": ["gulp", "gulpplugin"],
   "main": "lib/index.js",
   "dependencies": {
     "glob": "^3.2.7"
   },
-  "optionalDependencies": {
-    "gulp-yadda-steps": "^0.1.1",
-    "mkdirp": "^0.5.0",
-    "gulp-jshint": "^1.8.4",
-    "jshint-reporter-bamboo": "^0.1.0",
-    "mocha-bamboo-reporter-bgo": "^1.0.7",
-    "gulp-istanbul-custom-reports": "^0.1.0",
-    "gulp-tap": "^0.1.1",
-    "istanbul-reporter-clover-limits": "^0.1.1",
-    "gulp-json-editor": "^2.0.2",
-      "underscore": "^1.6.0"
-  },
+  "optionalDependencies": {},
   "devDependencies": {
     "yadda": "^0.10.14",
     "gulp": "^3.8.6",
@@ -42,19 +28,10 @@
     "npm-license": "^0.2.2",
     "should": "^4.0.4"
   },
-    "config": {
-        "build": "n/a",
-        "buildTimestamp": "2014-08-13T04:52:58.448Z",
-        "adminEmail": "admin@cellarise.com",
-        "coverage": {
-            "watermarks": {
-                "statements": [50, 80],
-                "lines": [50, 80],
-                "functions": [50, 80],
-                "branches": [50, 80]
-            }
-        }
-    },
+  "config": {
+    "build": "4",
+    "buildTimestamp": "2014-08-25T19:38:02.730+10:00"
+  },
   "directories": {
     "lib": "lib",
     "bin": "bin",
@@ -66,5 +43,6 @@
     "testSteps": "Test/",
     "reports": "Reports",
     "build": "Build"
-  }
+  },
+  "adminEmail": "admin@cellarise.com"
 }
