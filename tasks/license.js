@@ -8,15 +8,17 @@ var rename = require("gulp-rename");
  * A gulp build task to generate license documentation from all dependent packages.
  * @alias tasks:license
  */
-module.exports = function (gulp) {
+module.exports = function (gulp, context) {
     gulp.task('license', function () {
-        var context = require(process.cwd() + '/package.json');
-        var directories = context.directories;
+        var pkg = context.package;
+        var directories = pkg.directories;
         var processed = false; //workaround to enable pause and resume stream functions to work
 
-        return gulp.src([directories.doc + '/**/additional_licenses.json', directories.doc + '/readme.dust.md'])
+        return gulp.src([directories.doc + '/templates/license/additional_licenses.json',
+                directories.doc + '/templates/license/readme-license.dust'])
             .on('data', function (vinyl) {
                 var self = this;
+
                 if (!processed) {
                     processed = true;
                     self.pause();
@@ -27,7 +29,7 @@ module.exports = function (gulp) {
                         meta: JSON.parse(vinyl.contents),             // String: path to a metadata json file (see below)
                         include: 'all' // String | Array | 'all': recurse through various types of dependencies (https://npmjs.org/doc/json.html)
                     }, function (dependencies) {
-                        context.licenses = [];
+                        pkg.licenses = [];
                         //process to get into format for dust
                         var dep, result;
                         for (dep in dependencies) {
@@ -40,12 +42,12 @@ module.exports = function (gulp) {
                                 //if (dependencies[dep] instanceof Array){
                                 //    result.repository
                                 //}
-                                context.licenses.push(result);
+                                pkg.licenses.push(result);
                             }
                         }
                         //ensure this sub task gets executed to update the
                         gulp.src([directories.doc + '/templates/license/readme-license.dust'])
-                            .pipe(new GulpDustCompileRender(context))
+                            .pipe(new GulpDustCompileRender(pkg))
                             .pipe(rename(function (path) {
                                 path.basename = path.basename + '.dust';
                                 path.extname = '.md';
@@ -56,6 +58,7 @@ module.exports = function (gulp) {
                             });
                     });
                 }
+
             });
     });
 };

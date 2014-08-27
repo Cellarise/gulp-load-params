@@ -1,7 +1,7 @@
-Gulp-load will return a function that is same as `gulp.loadTasks`.
+{name} will return a function that is same as `gulp.loadTasks`.
 
 ```
-var loadTasks = require('gulp-load')(gulp);
+var loadTasks = require('{name}')(gulp);
 loadTasks === gulp.loadTasks // return true
 ```
 

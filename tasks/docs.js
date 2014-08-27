@@ -10,20 +10,21 @@ var GulpDustCompileRender = require('gulp-dust-compile-render');
  * Dependent on gulp build task `docs-pre`.
  * @alias tasks:docs
  */
-module.exports = function(gulp) {
+module.exports = function(gulp, context) {
     gulp.task("docs", function(){
-        var context = require(process.cwd() + '/package.json');
-        var directories = context.directories;
+        var cwd = context.cwd;
+        var pkg = context.package;
+        var directories = pkg.directories;
         var options = {
             template: './doc/readme.md',
             preserveWhitespace: true,
-            partialsGlob: path.join(process.cwd(), directories.doc) + '/templates/*.dust*'
+            partialsGlob: path.join(cwd, directories.doc) + '/templates/*.dust*'
         };
 
         return gulp.src([directories.lib + '/**/*.js'])
             .pipe(concat("README.md"))
             .pipe(jsdoc2md(options))
-            .pipe(new GulpDustCompileRender(context, options))
+            .pipe(new GulpDustCompileRender(pkg, options))
             .pipe(gulp.dest(""));
     });
 };

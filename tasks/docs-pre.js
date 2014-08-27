@@ -8,16 +8,17 @@ var GulpDustCompileRender = require('gulp-dust-compile-render');
  * A gulp build task to prepare document templates that must be saved to disk for the JSDoc documentation generator (run as part of the `doc` gulp task).
  * @alias tasks:docs-pre
  */
-module.exports = function(gulp) {
+module.exports = function(gulp, context) {
     gulp.task("docs-pre", function(){
-        var context = require(process.cwd() + '/package.json');
-        var directories = context.directories;
+        var cwd = context.cwd;
+        var pkg = context.package;
+        var directories = pkg.directories;
         var options = {
-            partialsGlob: path.join(process.cwd(), directories.doc) + '/templates/*.dust*'
+            partialsGlob: path.join(cwd, directories.doc) + '/templates/*.dust*'
         };
 
-        return gulp.src([directories.doc + '/templates/readme.dust.md'])
-            .pipe(new GulpDustCompileRender(context, options))
+        return gulp.src(directories.doc + '/templates/readme.dust.md')
+            .pipe(new GulpDustCompileRender(pkg, options))
             .pipe(rename(function (path) {
                 path.basename = path.basename.replace('.dust','');
             }))

@@ -4,10 +4,10 @@
 
 var Yadda = require('yadda');
 var context = { world: {} }; //interpreter context - global
-
-var directories = require(process.cwd() + '/package.json').directories;
-var testFeatures = process.cwd() + '/' + directories.testFeatures;
-var testSteps = process.cwd() + '/' + directories.testSteps;
+var cwd = process.cwd();
+var directories = require(cwd + '/package.json').directories;
+var testFeatures = cwd + '/' + directories.testFeatures;
+var testSteps = cwd + '/' + directories.testSteps;
 
 //helper function to prepare multiple libraries for loading into the yadda interpreter
 function require_libraries(libraries) {
