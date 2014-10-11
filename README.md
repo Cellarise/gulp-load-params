@@ -1,7 +1,8 @@
 # gulp-load-params
-[![view on npm](http://img.shields.io/npm/v/gulp-load-params.svg)](https://www.npmjs.org/package/gulp-load-params)
-[![npm module downloads per month](http://img.shields.io/npm/dm/gulp-load-params.svg)](https://www.npmjs.org/package/gulp-load-params)
-[![Dependency Status](https://david-dm.org/Cellarise/gulp-load-params.svg)](https://david-dm.org/Cellarise/gulp-load-params)
+[![view on npm](http://img.shields.io/npm/v/gulp-load-params.svg?style=flat)](https://www.npmjs.org/package/gulp-load-params)
+[![npm module downloads per month](http://img.shields.io/npm/dm/gulp-load-params.svg?style=flat)](https://www.npmjs.org/package/gulp-load-params)
+[![Dependency status](https://david-dm.org/Cellarise/gulp-load-params.svg?style=flat)](https://david-dm.org/Cellarise/gulp-load-params)
+[![Coverage](https://img.shields.io/badge/coverage-92%25_skipped:0%25-green.svg?style=flat)](https://www.npmjs.org/package/gulp-load-params)
 
 > Load gulp task just like grunt.loadTasks and pass parameters through an options object.
 
@@ -28,19 +29,21 @@ gulp.tasks('default', function() {
 
 
 # API
-      <a name="module_gulp-load-params"></a>
-    #gulp-load-params
-        Load gulp task just like grunt.loadTasks and pass parameters through an options object.
-        
-      **Params**
-      
-      - gulp `Object` - The gulp module  
-      - opts `Object` - optional options  
-        - \[modulePrefix='gulp-'\] `Object` - load dependencies that start with this prefix in package.json.  
-      
-      **Type**: `name`  
-      **Returns**: `loadTasks`**Example**  
-      gulp-load-params will return a function that is same as `gulp.loadTasks`.
+<a name="module_gulp-load-params"></a>
+#gulp-load-params
+Load gulp task just like grunt.loadTasks and pass parameters through an options object.
+
+**Params**
+
+- gulp `Object` - The gulp module  
+- opts `Object` - optional options  
+  - \[modulePrefix='gulp-'\] `Object` - load dependencies that start with this prefix in package.json.  
+  - \[taskPath='tasks'\] `Object` - load tasks from this directory path.  
+
+**Type**: `name`  
+**Returns**: `loadTasks`  
+**Example**  
+gulp-load-params will return a function that is same as `gulp.loadTasks`.
 
 ```
 var loadTasks = require('gulp-load-params')(gulp);
@@ -66,13 +69,95 @@ gulp.loadTasks('gulp-concat');
 ```
 
 **If load a module, it will load task from tasks directory of current module, and if gulp plugins (start with gulp-) exists in dependencies of package.json, then it will load each plugin as a module.**
-      
+
+
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*.
+
+
+#Changelog
+
+<table style="width:100%;border-spacing:0px;border-collapse:collapse;margin:0px;padding:0px;border-width:0px;">
+   <tr>
+    <th style="width:20px;text-align:center;"></th>
+    <th style="width:80px;text-align:center;">Type</th> 
+    <th style="width:80px;text-align:left;">ID</th>
+    <th style="text-align:left;">Summary</th>
+   </tr>
+
+  <tr>
+    <td colspan=4><strong>Version: 0.1.4 - released 2014-10-11</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Feature</td> 
+    <td style="width:80px;text-align:left;">MDGPLOAD-7</td>
+    <td>Package: Add option to provide an alternate lookup path for gulp tasks</td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Non-functional</td> 
+    <td style="width:80px;text-align:left;">MDGPLOAD-6</td>
+    <td>Package: Remove all gulp tasks except &#39;test&#39;</td>
+   </tr>
+
+
+  <tr>
+    <td colspan=4><strong>Version: 0.1.3 - released 2014-08-27</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Non-functional</td> 
+    <td style="width:80px;text-align:left;">MDGPLOAD-5</td>
+    <td>Package: Update dependencies.</td>
+   </tr>
+
+
+  <tr>
+    <td colspan=4><strong>Version: 0.1.2 - released 2014-08-27</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Non-functional</td> 
+    <td style="width:80px;text-align:left;">MDGPLOAD-4</td>
+    <td>Package: Migrate to new Cellarise Package Manager.</td>
+   </tr>
+
+
+  <tr>
+    <td colspan=4><strong>Version: 0.1.1 - released 2014-08-25</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10403&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Bug</td> 
+    <td style="width:80px;text-align:left;">MDGPLOAD-3</td>
+    <td>Package: Fix tasks in gulp packages overriding tasks in primary module.</td>
+   </tr>
+
+
+  <tr>
+    <td colspan=4><strong>Version: 0.1.0 - released 2014-08-25</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Feature</td> 
+    <td style="width:80px;text-align:left;">MDGPLOAD-2</td>
+    <td>Develop a gulp task loader with parameters</td>
+   </tr>
+
+
+</table>
+
 
 
 # License
 
-MIT License (MIT)
+MIT License (MIT). All rights not explicitly granted in the license are reserved.
 
 Copyright (c) 2014 John Barry
 
