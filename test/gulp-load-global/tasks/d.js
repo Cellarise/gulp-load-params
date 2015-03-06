@@ -1,3 +1,5 @@
-module.exports = function(gulp) {
-  gulp.task('d', function() {});
+/*eslint-disable*/
+module.exports = function (gulp) {
+  gulp.task('d', function () {
+  });
 };
