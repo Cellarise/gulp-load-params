@@ -23,4 +23,4 @@ LoadTasks can load by module's name. It will lookup from `NODE_PATH` and node_mo
 gulp.loadTasks('gulp-concat');
 ```
 
-**If load a module, it will load task from tasks directory of current module, and if gulp plugins (start with gulp-) exists in dependencies of package.json, then it will load each plugin as a module.**
+If loading a module, it will load task from tasks directory of current module, and if gulp plugins (start with gulp-) exists in dependencies of package.json, then it will load each plugin as a module.

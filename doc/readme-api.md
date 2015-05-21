@@ -1,16 +1,16 @@
-# API
+## API
 <a name="module_gulp-load-params"></a>
-#gulp-load-params
+### gulp-load-params ⇒ <code>loadTasks</code>
 Load gulp task just like grunt.loadTasks and pass parameters through an options object.
-**Params**
+**Returns**: <code>loadTasks</code> - loadTasks function  
 
-- gulp `Object` - The gulp module  
-- opts `Object` - optional options  
-  - \[modulePrefix="gulp-"\] `Object` - load dependencies that start with this prefix in package.json.  
-  - \[taskPath="tasks"\] `Object` - load tasks from this directory path.  
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| gulp | <code>Object</code> |  | The gulp module |
+| opts | <code>Object</code> |  | optional options |
+| [opts.modulePrefix] | <code>Object</code> | <code>&quot;gulp-&quot;</code> | load dependencies that start with this prefix in package.json. |
+| [opts.taskPath] | <code>Object</code> | <code>&quot;tasks&quot;</code> | load tasks from this directory path. |
 
-**Type**: `name`  
-**Returns**: `loadTasks` - loadTasks function  
 **Example**  
 gulp-load-params will return a function that is same as `gulp.loadTasks`.
 
@@ -37,5 +37,7 @@ LoadTasks can load by module's name. It will lookup from `NODE_PATH` and node_mo
 gulp.loadTasks('gulp-concat');
 ```
 
-**If load a module, it will load task from tasks directory of current module, and if gulp plugins (start with gulp-) exists in dependencies of package.json, then it will load each plugin as a module.**
+If loading a module, it will load task from tasks directory of current module, and if gulp plugins (start with gulp-) exists in dependencies of package.json, then it will load each plugin as a module.
+-
+
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*.
