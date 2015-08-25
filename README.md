@@ -2,7 +2,10 @@
 [![view on npm](http://img.shields.io/npm/v/gulp-load-params.svg?style=flat)](https://www.npmjs.org/package/gulp-load-params)
 [![npm module downloads per month](http://img.shields.io/npm/dm/gulp-load-params.svg?style=flat)](https://www.npmjs.org/package/gulp-load-params)
 [![Dependency status](https://david-dm.org/Cellarise/gulp-load-params.svg?style=flat)](https://david-dm.org/Cellarise/gulp-load-params)
-[![Coverage](https://img.shields.io/badge/coverage-93%25_skipped:0%25-green.svg?style=flat)](https://www.npmjs.org/package/gulp-load-params)
+[![Build Status](https://travis-ci.org/Cellarise/gulp-load-params.svg?branch=master)](https://travis-ci.org/Cellarise/gulp-load-params)
+[![Code
+Climate](https://codeclimate.com/github/Cellarise/gulp-load-params/badges/gpa.svg)](https://codeclimate.com/github/Cellarise/gulp-load-params)
+[![Test Coverage](https://codeclimate.com/github/Cellarise/gulp-load-params/badges/coverage.svg)](https://codeclimate.com/github/Cellarise/gulp-load-params/badges/coverage.svg)
 
 > Load gulp task just like grunt.loadTasks and pass parameters through an options object.
 
@@ -219,5 +222,5 @@ MIT License (MIT). All rights not explicitly granted in the license are reserved
 
 Copyright (c) 2015 John Barry
 ## Dependencies
-[balanced-match@0.2.0](&quot;https://github.com/juliangruber/balanced-match&quot;) - &quot;MIT&quot;, [brace-expansion@1.1.0](&quot;https://github.com/juliangruber/brace-expansion&quot;) - &quot;MIT&quot;, [concat-map@0.0.1](&quot;https://github.com/substack/node-concat-map&quot;) - &quot;MIT&quot;, [glob@5.0.6](&quot;https://github.com/isaacs/node-glob&quot;) - &quot;ISC&quot;, [gulp-load-params@0.0.0](&quot;https://github.com/Cellarise/gulp-load-params&quot;) - &quot;MIT License (MIT)&quot;, [inflight@1.0.4](&quot;https://github.com/isaacs/inflight&quot;) - &quot;ISC&quot;, [inherits@2.0.1](&quot;https://github.com/isaacs/inherits&quot;) - &quot;ISC&quot;, [minimatch@2.0.8](&quot;https://github.com/isaacs/minimatch&quot;) - &quot;ISC&quot;, [once@1.3.2](&quot;https://github.com/isaacs/once&quot;) - &quot;ISC&quot;, [path-is-absolute@1.0.0](&quot;https://github.com/sindresorhus/path-is-absolute&quot;) - &quot;MIT&quot;, [wrappy@1.0.1](&quot;https://github.com/npm/wrappy&quot;) - &quot;ISC&quot;, 
+[gulp-load-params@0.0.0](&quot;https://github.com/Cellarise/gulp-load-params&quot;) - &quot;MIT License (MIT)&quot;, 
 *documented by [npm-licenses](http://github.com/AceMetrix/npm-license.git)*.
