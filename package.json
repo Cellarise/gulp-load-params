@@ -16,7 +16,7 @@
     "test": "./node_modules/.bin/gulp"
   },
   "dependencies": {
-    "glob": "^6.0.1"
+    "glob": "^7.0.0"
   },
   "devDependencies": {
     "bunyan": "^1.1.3",
