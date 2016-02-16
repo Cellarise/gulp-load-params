@@ -1,6 +1,6 @@
 {
   "name": "gulp-load-params",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Load gulp task just like grunt.loadTasks and pass parameters through an options object.",
   "author": "John Barry",
   "repository": {
@@ -39,8 +39,8 @@
   },
   "config": {
     "projectCode": "MDGPLOAD",
-    "build": "35",
-    "buildTimestamp": "2015-11-13T08:54:33.626Z",
+    "build": "38",
+    "buildTimestamp": "2016-02-16T01:05:11.534Z",
     "adminEmail": "admin@cellarise.com",
     "coverage": {
       "codeClimate": true,
